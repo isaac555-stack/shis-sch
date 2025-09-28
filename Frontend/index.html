@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/shinelight-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shinelight International School - Excellence in education, nurturing leaders, and building a brighter future for every child."
+    />
+    <meta
+      name="keywords"
+      content="Shinelight International School, Abuja schools, quality education Nigeria, admission, enrollment, school website"
+    />
+    <meta name="author" content="Shinelight International School" />
+    <title>Shinelight International School | Excellence in Learning</title>
+
+    <!-- Open Graph (for search engines & previews) -->
+    <meta property="og:title" content="Shinelight International School" />
+    <meta
+      property="og:description"
+      content="A citadel of learning committed to excellence, discipline, and leadership."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.shis.com" />
+    <meta property="og:image" content="./src/assets/hero.jpg" />
+
+    
+    <style>
+      /* Preloader Container */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white; /* or brand color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+      }
+
+      /* Spinning Ring */
+      .loader-ring {
+        width: 160px;
+        height: 160px;
+        border: 6px solid rgba(21, 101, 192, 0.15); /* faint border */
+        border-top: 6px solid #1565c0; /* main brand color */
+        border-radius: 50%;
+        animation: spin 1.2s linear infinite,
+          glow 1.5s ease-in-out infinite alternate;
+        position: relative;
+      }
+
+      /* Centered Logo (No Spin) */
+      .loader-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      /* Spin animation */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Glow effect animation */
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 5px rgba(21, 101, 192, 0.3),
+            0 0 10px rgba(21, 101, 192, 0.3);
+        }
+        100% {
+          box-shadow: 0 0 20px rgba(21, 101, 192, 0.6),
+            0 0 40px rgba(21, 101, 192, 0.4);
+        }
+      }
+      /* Fade-out when site loads */
+      #preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <img
+        src="./src/assets/shinelight-logo.png"
+        alt="School Logo"
+        class="loader-logo"
+      />
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
